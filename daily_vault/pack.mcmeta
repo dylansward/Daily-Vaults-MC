@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "description": "Resets vaults at the beginning of each in-game day, allowing them to be reopened without the need of 129 user accounts.",
+        "pack_format": 81,
+        "supported_formats": [81,81]
+    }
+}

@@ -1,0 +1,2 @@
+# Function that checks whether or not it is a new minecraft day. If it is, this will call the function to unlock all vaults.
+execute if predicate daily_vault:is_new_day run function daily_vault:unlock_all_vaults

@@ -1,0 +1,50 @@
+{
+    "criteria" : {
+        "vault" : {
+            "trigger" : "minecraft:item_used_on_block",
+            "conditions" : {
+                "location" : [
+                    {
+                        "condition" : "minecraft:match_tool",
+                        "predicate" : {"items" : ["minecraft:trial_key"]}
+                    },
+                    {
+                        "condition" : "minecraft:location_check",
+                        "predicate" : {
+                            "block" : {
+                                "blocks" : "minecraft:vault",
+                                "state" : {"ominous" : "false"}
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "ominous" : {
+            "trigger" : "minecraft:item_used_on_block",
+            "conditions" : {
+                "location" : [
+                    {
+                        "condition" : "minecraft:match_tool",
+                        "predicate" : {"items" : ["minecraft:ominous_trial_key"]}
+                    },
+                    {
+                        "condition" : "minecraft:location_check",
+                        "predicate" : {
+                            "block" : {
+                                "blocks" : "minecraft:vault",
+                                "state" : {"ominous" : "true"}
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "requirements" : [
+        ["vault", "ominous"]
+    ],
+    "rewards" : {
+        "function" : "daily_vault:process_vault_usage"
+    }
+}
